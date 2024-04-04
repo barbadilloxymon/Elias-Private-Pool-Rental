@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+    <title>Login-Signup</title>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo"> <i class="fas fa-hotel"></i>Elias Resort</a>
+        
+    </header>
+
+    <div class="container">
+
+        <div class="login-signup">
+
+            <form action="" class="login-form">
+
+                <h2 class="title">Login</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username" required>
+                </div>
+
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" required >
+                </div>
+                <input type="submit" value="Login" class="btn">
+                <p class="social-text" style="color: #444;">Or Sign in with social platform</p>
+                <div class="social-media">
+                    <a href="" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                </div>
+                <p class="account-text">Don't have an account? <a href="#" id="sign-up-btn2">Sign up</a></p>
+            </form>
+
+
+            <form action="" class="sign-up-form">
+
+                <h2 class="title">Sign Up</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" placeholder="Email" required>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <input type="submit" value="Sign up" class="btn">
+                <p class="social-text" style="color: #444;">Or Sign in with social platform</p>
+                <div class="social-media">
+                    <a href="" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                </div>
+                <p class="account-text">Already have an account? <a href="#" id="login-btn2">Login</a></p>
+            </form>
+        </div>
+        <div class="panels-container">
+            
+            <div class="panel left-panel">
+
+                <div class="content">
+                    <h3>Already have an account? </h3>
+                    <p>Welcome to Elias Private Pool Rental!</p>
+                    <button class="btn" id="login-btn">Login</button>
+                </div>
+            </div>
+
+            <div class="panel right-panel">
+
+                <div class="content">
+                    <h3>New here? Click the "Sign up" button and let's get started!</h3>
+                    <p>Welcome to Elias Private Pool Rental!</p>
+                    <button class="btn" id="sign-up-btn">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- JS -->
+
+    <script>
+        const sign_login_btn = document.querySelector("#login-btn");
+        const sign_up_btn = document.querySelector("#sign-up-btn");
+        const container = document.querySelector(".container");
+        const sign_login_btn2 = document.querySelector("#login-btn2");
+        const sign_up_btn2 = document.querySelector("#sign-up-btn2");
+
+        sign_up_btn.addEventListener("click", () => {
+            container.classList.add("sign-up-mode");
+        });
+
+        sign_login_btn.addEventListener("click", () => {
+            container.classList.remove("sign-up-mode");
+        });
+
+        sign_up_btn2.addEventListener("click", () => {
+            container.classList.add("sign-up-mode2");
+        });
+
+        sign_login_btn2.addEventListener("click", () => {
+            container.classList.remove("sign-up-mode2");
+        });
+    </script>
+</body>
+</html>

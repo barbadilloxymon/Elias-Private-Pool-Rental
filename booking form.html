@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking and Reservation</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo"> <i class="fas fa-hotel"></i>Elias Resort</a>
+        
+    </header>
+
+    <div class="container">
+            <!-- <nav>
+                <div class="navbar">
+                    <ul class="navlinks">
+                        <label id="bar">Booking and Reservation</label>
+                        <li class="aa"><a href="#">Home</a></li>
+                        <li  class="aa"><a href="#a">About Us</a></li>   
+                        <li  class="aa"><a href="#">Registration</a></li>
+                    </ul>
+                </div>
+            </nav> -->
+
+            <form>
+                <h1>Registration Form</h1>
+                <div class="form-row">
+                    <div class="infos">
+                        <label for="fname">First Name:</label><br>
+                        <input type="text" id="fname" name="fname"><br>
+    
+                        <label for="lname">Last Name:</label><br>
+                        <input type="text" id="lname" name="lname"><br>
+    
+                        <label for="mi">M.I:</label><br>
+                        <input type="text" id="mi" name="mi"><br>
+                    </div>
+                </div>
+                
+                
+
+                <label for="address">Address:</label><br>
+                <input type="text" id="address" name="address"><br>
+
+                <div>
+                    <label for="phone">Phone:</label><br>
+                    <input type="tel" id="phone" name="phone"><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br>
+    
+                    <label for="zip">Zip Code:</label><br>
+                    <input type="text" id="zip" name="zip"><br>
+                </div>
+                
+
+                <label for="requirements">Requirements:</label><br>
+                <select id="requirements" name="requirements">
+                    <option value="passport">Passport</option>
+                    <option value="votersid">Voter's ID</option>
+                </select><br>
+
+                <label for="validid">Valid ID:</label><br>
+                <input type="text" id="validid" name="validid"><br>
+
+                <label for="duration">Duration Stay:</label><br>
+                <input type="text" id="duration" name="duration"><br>
+
+
+                <div>
+                    <label for="checkindate">Check-in Date:</label><br>
+                    <input type="date" id="checkindate" name="checkindate"><br>
+
+                    <label for="checkoutdate">Check-out Date:</label><br>
+                    <input type="date" id="checkoutdate" name="checkoutdate"><br>
+                </div>
+                
+                <div>
+                    <label for="citime">Check in Time:</label><br>
+                    <input type="time" name="citime" id="citime">
+
+                    <label for="cotime">Check out Time:</label><br>
+                    <input type="time" name="cotime" id="cotime">
+                </div>
+                
+                <label for="payment">Payment Method:</label><br>
+                <select id="payment" name="payment">
+                    <option value="creditcard">Credit Card</option>
+                    <option value="debitcard">Debit Card</option>
+                    <option value="cash">Cash</option>
+                </select><br>
+
+                <label for="roompreference">Room Preference:</label><br>
+                <select id="roompreference" name="roompreference">
+                    <option value="standard">Standard</option>
+                    <option value="deluxe">Deluxe</option>
+                    <option value="suite">Suite</option>
+                </select><br>
+
+                <label for="roomtype">Room Type:</label><br>
+                <select id="roomtype" name="roomtype">
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                </select><br>
+
+                <input type="submit" value="Submit">
+            </form>
+    </div>
+</body>
+</html>

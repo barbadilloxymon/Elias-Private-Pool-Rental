@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elias Private Pool Rental</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!-- Add the Font Awesome CSS here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+<body>
+
+     <header class="header">
+            <a href="#" class="logo"> <i class="fas fa-hotel"></i>Elias Resort</a>
+            
+            <nav class="navbar" id="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#room">Room</a>
+                <a href="#faqs">FAQs</a>
+                <a href="#contact">Contact Us</a>
+                <!-- <a href="#reservation" class="btn">BOOK NOW</a> -->
+            </nav>
+
+            <div class="icon" id="loginIcon">
+                <a href="login.html"><i class="fas fa-user"></i></a>
+            </div>
+
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </header>
+
+        <!-- Home Page -->
+    
+    <section class="home" id="home">
+      
+         <div class="swiper home-slider">
+
+            <div class="swiper-wrapper">
+                 
+                <div class="swiper-slide slide" style="background: url(Images/home1_bg.jpg) no-repeat;">
+                   <div class="content">
+                    <h3>Welcome to Elias Private Pool</h3>
+                    <a href="#" class="btn">BOOK NOW</a>
+                   </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background: url(Images/home_2.bg.jpg) no-repeat;">
+                    <div class="content">
+                     <h3>Welcome to Elias Private Pool</h3>
+                     <a href="#" class="btn">BOOK NOW</a>
+                    </div>
+                 </div>
+
+                 <div class="swiper-slide slide" style="background: url(Images/home_3.bg.jpg) no-repeat;">
+                    <div class="content">
+                     <h3>Welcome to Elias Private Pool</h3>
+                     <a href="#" class="btn">BOOK NOW</a>
+                    </div>
+                 </div>
+
+                 <div class="swiper-slide slide" style="background: url(Images/home4.bg.jpg) no-repeat;">
+                    <div class="content">
+                     <h3>Welcome to Elias Private Pool</h3>
+                     <a href="#" class="btn">BOOK NOW</a>
+                    </div>
+                 </div>
+
+                 <div class="swiper-slide slide" style="background: url(Images/home5.bg.jpg) no-repeat;">
+                    <div class="content">
+                     <h3>Welcome to Elias Private Pool</h3>
+                     <a href="#" class="btn">BOOK NOW</a>
+                    </div>
+                 </div>
+            </div>
+          
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+         </div>
+
+    </section>    
+
+    <!-- Availability -->
+    
+    <section class="availability">
+
+           <form action="calendar.html">
+
+              <div class="box">
+                <p>Check in <span>*</span></p>
+                <input type="date" class="input">
+              </div>
+              
+              <div class="box">
+                <p>Check out <span>*</span></p>
+                <input type="date" class="input">
+              </div>
+              
+              <div class="box">
+                <p>adults <span>*</span></p>
+                <input type="number" name="adult" id="" class="input" min="1" max="25" placeholder="Enter No. of adults">
+            </div>
+            
+                
+              <div class="box">
+                <p>children <span>*</span></p>
+                <input type="number" name="child" id="" class="input" min="1" max="20" placeholder="Enter no. of children">
+            </div>
+                
+              <div class="box">
+                <p>Number of Room <span>*</span></p>
+                <select name="rooms" id="" class="input">
+                    <option value="1">1 room</option>
+                    <option value="2">2 rooms</option>
+                    <option value="3">3 rooms</option>
+                    <option value="4">4 rooms</option>
+                </select>
+              </div>
+         
+
+              <input type="submit" value="check availability" class="btn">
+           </form>
+    </section>
+
+
+    <!-- About page -->
+    <section class="about" id="about">
+        <div class="row">
+            <div class="image">
+                <img src="Images/home2.bg.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>About us</h3>
+                <p>Welcome to Elias Resort, located in Pansol, Calamba City, Laguna.  A lukewarm water temperature can be quite pleasant for swimming or relaxing. </p>
+                <p>At Elias Resort, we believe in creating moments that last a lifetime. Whether it's a family vacation, a romantic getaway, or a solo retreat, our dedicated team is here to ensure your stay is nothing short of exceptional. Join us and discover the magic of Elias Resort, where every day is an opportunity to explore, relax, and create new memories.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Room Page -->
+    <section class="room" id="room"> 
+        
+    <h1 class="heading">Our Room</h1>
+        <div class="swiper room-slider">
+
+         <div class="swiper-wrapper">
+
+               <div class="swiper-slide slide">
+                   <div class="images">
+                      <img src="Images/room1.bg.jpg" alt="">
+                   </div>
+                   <div class="content">
+                    <h3>Guest Room A</h3>
+                    <p>One double deck bed</p>
+                    <!-- <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div> -->
+                    <a href="#" class="btn">BOOK NOW</a>
+                   </div>
+               </div>
+               
+               <div class="swiper-slide slide">
+                <div class="images">
+                   <img src="Images/room2.bg.jpg" alt="">
+                </div>
+                <div class="content">
+                 <h3>Guest Room B</h3>
+                 <p>One double deck bed</p>
+                 <!-- <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star-half-alt"></i>
+                 </div> -->
+                 <a href="#" class="btn">BOOK NOW</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="images">
+                   <img src="Images/room3.bg.jpg" alt="">
+                </div>
+                <div class="content">
+                 <h3>Guest Room C</h3>
+                 <p>Three double deck bed good</p>
+                 <!-- <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star-half-alt"></i>
+                 </div> -->
+                 <a href="#" class="btn">BOOK NOW</a>
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="images">
+                   <img src="Images/room4.bg.jpg" alt="">
+                </div>
+                <div class="content">
+                 <h3>Guest Room D</h3>
+                 <p>Four double deck bed</p>
+                 <!-- <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star-half-alt"></i>
+                 </div> -->
+                 <a href="#" class="btn">BOOK NOW</a>
+                </div>
+            </div>
+        </div>
+            
+            <div class="swiper-pagination"></div>
+
+         </div>
+
+    </section>
+
+    <section class="faqs" id="faqs">
+
+         <h1 class="heading">frequently asked questions</h1>
+
+         <div class="row">
+
+            <div class="image">
+            <img src="Images/faqs-img-unscreen.gif" alt="">
+            </div>
+
+         <div class="content">
+             
+            <div class="box active">
+               <h3>What payment methods are available?</h3>
+               <p>Payment can be made through GCash.</p>
+            </div>
+            
+            <div class="box">
+                <h3>What payment methods are available?</h3>
+                <p>Payment can be made through GCash.</p>
+             </div>
+
+             <div class="box">
+                <h3>What payment methods are available?</h3>
+                <p>Payment can be made through GCash.</p>
+             </div>
+
+             <div class="box">
+                <h3>What payment methods are available?</h3>
+                <p>Payment can be made through GCash.</p>
+             </div>
+
+             <div class="box">
+                <h3>What payment methods are available?</h3>
+                <p>Payment can be made through GCash.</p>
+             </div>
+
+          </div>
+        </div>
+    </section>
+
+
+    <section class="contact" id="contact">
+        <div class="contact-bg">
+            <h1 class="heading">Contact Us</h2>
+            <!-- <div class="line">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div> -->
+        </div>
+    
+        <div class="contact-body">
+            <div class="contact-info">
+                <div>
+                    <span><i class="fas fa-mobile-alt"></i></span>
+                    <span class="name">Phone No.</span>
+                    <span class="text">09675511396</span>
+                </div>
+                <div>
+                    <span><i class="fas fa-envelope-open"></i></span>
+                    <span class="name">E-mail</span>
+                    <span class="text">eliasprivatepoolrental@gmail.com</span>
+                </div>
+                <div>
+                    <span><i class="fas fa-map-marker-alt"></i></span>
+                    <span class="name">Address</span>
+                    <span class="text">939 Kamagong Street, Calamba, 4027 Laguna</span>
+                </div>
+            </div>
+    
+            <div class="contact-form">
+                <form>
+                    <div>
+                        <input type="text" class="form-control" placeholder="First Name">
+                        <input type="text" class="form-control" placeholder="Last Name">
+                    </div>
+                    <div>
+                        <input type="email" class="form-control" placeholder="E-mail">
+                        <input type="text" class="form-control" placeholder="Phone">
+                    </div>
+                    <textarea rows="5" placeholder="Message" class="form-control"></textarea>
+                    <input type="submit" class="send-btn" value="Send Message">
+                </form>
+    
+            </div>
+        </div>
+    
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3868.302381261911!2d121.18613957460305!3d14.177059386260625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd616b63e92ac3%3A0x59e3798322786e3!2sElias%20Resort!5e0!3m2!1sen!2sph!4v1710933549125!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    
+        <div class="contact-footer">
+            <h3>Visit Us</h3>
+            <div class="social-links">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+                <a href="#" class="fab fa-youtube"></a>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+     <script src="script.js"></script>
+</body>
+</html>

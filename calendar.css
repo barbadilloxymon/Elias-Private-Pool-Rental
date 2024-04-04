@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --primary-color: rgb(2, 2, 52);
+    --secondary-color: rgb(245, 162, 8);
+    --text-dark: #0f172a;
+    --primary: #0077b6;
+    --text-light: whitesmoke;
+    --extra-light: rgb(3, 5, 67);
+    --box-shadow: 0 .2rem .5rem rgba(0,0,0,0.1);
+    --white: #ffffff;
+    --max-width:1200px;
+    --header-font: "Playfair Display", serif;  
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+
+.header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.header .logo {
+    font-size: 1.8rem;
+    font-weight: bolder;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.header .logo i {
+    color: var(--extra-light);
+    padding-right: .5rem;
+}
+.row {
+    margin: .5rem;
+}
+.row-height{
+    margin-top: 6rem;
+}
+.calendar {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+.calendar table {
+    width: 100%;
+}
+.calendar th,
+.calendar td {
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .available {
+    background-color: white;
+  }
+  .unavailable {
+    background-color: #ccc;
+  }
+  .selected {
+    background-color: lightblue;
+  }
+  .calendar-header .arrow {
+    display: inline-block;
+    width: 20px;
+    cursor: pointer;
+  }
+
+  .color-box {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+  }
+  
+  .legend .legend-color-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.legend .legend-available {
+    background-color: lightgray;
+}
+
+.legend .legend-invalid {
+    background-color: red;
+}
+
+.legend .legend-not-available {
+    background-color: darkgray;
+}
+
+.legend .legend-check-in {
+    background-color: skyblue;
+}
+
+.legend .legend-check-out {
+    background-color: lightgreen;
+}

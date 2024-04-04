@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="calendar.css">
+
+  <title>Availability Calendar</title>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo"> <i class="fas fa-hotel"></i>Elias Resort</a>
+        
+    </header>
+
+<div class="row hidden-xs">
+    <div class="row-height">
+        <!-- CALENDAR  (START) ================================================== -->
+        <div class="col-xs-12 col-top">
+            <div class="calendar-block">
+                <div class="calendar calendar-left">
+                    <div class="calendar-header clearfix">
+                        <div class="col-xs-2 text-left arrow" id="prev-month">&lt;</div>
+                        <div class="col-xs-8"><h1 id="current-month">April 2024</h1></div>
+                        <div class="col-xs-2 text-right arrow" id="next-month">&gt;</div>
+                    </div>
+                    <div class="calendar-days">
+                        <table class="table-condensed full-width">
+                            <col width="">
+                            <tr>
+                                <th>SUN</th>
+                                <th>MON</th>
+                                <th>TUE</th>
+                                <th>WED</th>
+                                <th>THU</th>
+                                <th>FRI</th>
+                                <th>SAT</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="calendar-dates">
+                        <table class="table-condensed table-bordered full-width" id="calendar-body">
+                            <!-- Calendar dates will be dynamically added here -->
+                        </table>
+                    </div>
+                    <div class="col-sm-6">
+                        <span class="bold">Check-in:</span> &nbsp; 02:00 PM &nbsp;|&nbsp; <span class="bold">Check-out:</span> &nbsp; 12:00 PM
+                    </div>
+                    <div class="col-sm-6 hidden-xs text-right">
+                        <span class="italic">* Rates are subject to change without prior notice and indicative only.</span>
+                    </div>
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6 text-right"></div>
+                </div>
+                <div class="gap visible-xs"></div>
+                <!-- <p class="visible-xs">
+                    * Rates are subject to change without prior notice and indicative only.
+                </p> -->
+                <!-- Calendar's Legend -->
+                <div class="hidden-xs legend">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <!-- s -->
+                            <div class="row legend">
+                                <div class="col-md-3 col-sm-4">
+                                    <div class="legend-color-box legend-available"></div>
+                                    <span>Available Date</span>
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <div class="legend-color-box legend-invalid"></div>
+                                    <span>Invalid Date</span>
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <div class="legend-color-box legend-not-available"></div>
+                                    <span>Not Available</span>
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <div class="legend-color-box legend-check-in"></div>
+                                    <span>Check-in Date</span>
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <div class="legend-color-box legend-check-out"></div>
+                                    <span>Check-out Date</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="gap"></div>
+                            <div class="gap"></div>
+                            <form id="form" method="post" action="?p=1&t=0&check_in_date=Apr 04, 2024&check_out_date=Apr 05, 2024">
+                                <input type="hidden" name="check_in_date" value="Apr 04, 2024">
+                                <input type="hidden" name="check_out_date" value="Apr 05, 2024">
+                                <input type="hidden" name="default_currency_posted" value="PHP">
+                                <input type="hidden" name="default_language_posted" value="en">
+                                <input type="hidden" name="special_code" value="">
+                                <input type="hidden" name="third_party_ref_code" value="">
+                                <a href="javascript:void(0);" id="btn_form_0" class="btn btn-next btn-3 pull-right btn-submit" style="width:200px;">CONTINUE</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="gap-md"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Define unavailable dates
+    const unavailableDates = [2, 3, 9, 10];
+    let selectedDates = [];
+    let currentMonth = 3; // April (0-based index)
+
+    function generateCalendar(month) {
+        const calendarBody = document.getElementById('calendar-body');
+        const calendarHeader = document.getElementById('current-month');
+        let date = new Date();
+        date.setMonth(month);
+        date.setDate(1);
+
+        // Clear previous calendar
+        calendarBody.innerHTML = '';
+
+        const monthDays = document.createDocumentFragment();
+
+        while (date.getMonth() === month) {
+            const tr = document.createElement('tr');
+
+            for (let i = 0; i < 7; i++) {
+                const td = document.createElement('td');
+                const day = date.getDate();
+
+                if (unavailableDates.includes(day)) {
+                    td.textContent = day;
+                    td.classList.add('unavailable');
+                } else {
+                    td.textContent = day;
+                    td.classList.add('available');
+                }
+
+                td.addEventListener('click', function () {
+                    toggleDate(td, day);
+                });
+
+                tr.appendChild(td);
+                date.setDate(date.getDate() + 1);
+            }
+
+            monthDays.appendChild(tr);
+        }
+
+        calendarBody.appendChild(monthDays);
+        calendarHeader.textContent = `${getMonthName(month)} ${date.getFullYear()}`;
+    }
+
+    function toggleDate(td, day) {
+        if (unavailableDates.includes(day)) {
+            alert('This date is not available for booking.');
+        } else {
+            if (td.classList.contains('selected')) {
+                td.classList.remove('selected');
+                selectedDates = selectedDates.filter(date => date !== day);
+            } else {
+                td.classList.add('selected');
+                selectedDates.push(day);
+            }
+        }
+    }
+
+    function getMonthName(month) {
+        const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        return months[month];
+    }
+
+    // Generate calendar when the page loads
+    generateCalendar(currentMonth);
+
+    // Previous month arrow click event
+    document.getElementById('prev-month').addEventListener('click', function() {
+        currentMonth--;
+        if (currentMonth < 0) {
+            currentMonth = 11; // December
+        }
+        generateCalendar(currentMonth);
+    });
+
+    // Next month arrow click event
+    document.getElementById('next-month').addEventListener('click', function() {
+        currentMonth++;
+        if (currentMonth > 11) {
+            currentMonth = 0; // January
+        }
+        generateCalendar(currentMonth);
+    });
+
+    // Get the "CONTINUE" button element
+    var continueBtn = document.getElementById('btn_form_0');
+
+    // Add a click event listener to the "CONTINUE" button
+    continueBtn.addEventListener('click', function() {
+        // Perform the desired action when the button is clicked
+        // For example, you can redirect the user to another page
+        window.location.href = 'booking form.html'; // Replace 'https://example.com' with the desired URL
+    });
+</script>
+</body>
+</html>
